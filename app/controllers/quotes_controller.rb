@@ -1,5 +1,3 @@
-class QuotesController < ApplicationController
-end
 # app/controllers/quotes_controller.rb
 
 class QuotesController < ApplicationController
@@ -10,6 +8,7 @@ class QuotesController < ApplicationController
     end
   
     def show
+      @line_item_dates = @quote.line_item_dates.ordered
     end
   
     def new
